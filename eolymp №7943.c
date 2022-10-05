@@ -2,7 +2,7 @@
 
 int main(){
 	int a,b;
-	scanf("%d %d",&a,&b);
-	printf("%d",(a+b)*2);
+	cin>>a>>b;
+	cout<<(a+b)*2;
 	return 0;
 }
