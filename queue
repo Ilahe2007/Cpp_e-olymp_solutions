@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	string a;
+	queue<long long>q;
+	long long b;
+	while (cin>>a){
+		if (a=="push"){
+			cin>>b;
+			q.push(b);
+			cout<<"ok"<<endl;
+		}else if (a=="pop"){
+			if (q.size()!=0){
+				cout<<q.front()<<endl;
+				q.pop();
+			}else{
+				cout<<"error"<<endl;
+			}
+		}else if (a=="front"){
+			if (q.size()!=0)	cout<<q.front()<<endl;
+			else 			cout<<"error"<<endl;
+		}else if (a=="size"){
+			cout<<q.size()<<endl;
+		}else if (a=="exit"){
+			cout<<"bye"<<endl;
+			break;
+		}else if (a=="clear"){
+			while (!q.empty()){
+				q.pop();
+			}
+			cout<<"ok"<<endl;
+		}
+	}
+}
