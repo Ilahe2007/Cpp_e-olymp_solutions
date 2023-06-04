@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+
+int main(){
+	ll n;
+	cin>>n;
+	ll g[n+1][n+1];
+	for(ll i=1;i<=n;i++){
+		for(ll j=1;j<=n;j++){
+			cin>>g[i][j];
+		}
+	}ll c=0;
+	for(ll u=1;u<=n;u++){
+		for(ll v=1;v<=n;v++){
+			for(ll k=1;k<=n;k++){
+				if(g[u][v]==1 and g[v][k]==1 and g[u][k]!=1){
+					cout<<"NO"<<endl;
+					c++;
+					break;
+				}if(c==1){
+					break;
+				}
+			}if(c==1){
+				break;
+			}
+		}if(c==1){
+			break;
+		}
+	}if(c==0){
+		cout<<"YES"<<endl;
+	}
+}
