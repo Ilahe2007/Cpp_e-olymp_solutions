@@ -2,7 +2,7 @@
 using namespace std;
 #define ll long long
 
-ll f(ll n){
+bool f(ll n){
     bool a=true;
     for(ll i=2;i<=sqrt(n);i++){
         if(n%i==0){
